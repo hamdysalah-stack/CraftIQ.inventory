@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using huzcodes.Persistence.Implementations.EfRepository;
 
 namespace CraftIQ.inventory.InfraStructure.Data
 {
-    internal class InventoryRepository
+     public class InventoryRepository<TEntity> : HuzcodesRepository<TEntity> where TEntity : class
     {
+
+        public InventoryRepository(AppDbcontext dbcontext) :base(dbcontext)
+        {
+
+            
+        }
     }
 }
