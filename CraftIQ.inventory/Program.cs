@@ -17,6 +17,9 @@ namespace CraftIQ.inventory
             // Register the database context
             var inventorydbconnectionstring = builder.Configuration.GetSection("ConnectionStrings:InventoryDBConnection");
             builder.Services.AddInventoryDbContext(inventorydbconnectionstring.Value!);
+            builder.Services.AddinfrastructureRegisteration();
+
+            
 
             var app = builder.Build();
 
