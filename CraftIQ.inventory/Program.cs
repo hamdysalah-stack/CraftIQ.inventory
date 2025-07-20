@@ -1,4 +1,5 @@
 using CraftIQ.inventory.InfraStructure;
+using huzcodes.Extensions.Exceptions;
 namespace CraftIQ.inventory
 {
     public class Program
@@ -30,7 +31,12 @@ namespace CraftIQ.inventory
                 app.UseSwaggerUI();
             }
 
+
             app.UseHttpsRedirection();
+
+            app.AddExceptionHandlerExtension();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
